@@ -33,5 +33,5 @@ export const phonegenerateOtpApi = async (body) => {
 }
 
 export const phoneverificationOtpApi = async (body) => {
-  return await commonApi("POST", `${BASE_URL}/phoneOtp`, body, "");
+  return await commonApi("POST", `${BASE_URL}/phoneotpverify`, body, "");
 }

@@ -53,6 +53,9 @@ const Regmodal = ({ show, handleClose }) => {
             }
 
         } catch (error) {
+            if(error.response.status===406){
+                alert("User already exist")
+            }
             console.error('Error response from API:', error.response);
             toast.error(error.response?.data?.message || 'An error occurred while Registering the profile. Please try again.', { position: 'top-center' });
         }
@@ -80,7 +83,7 @@ const Regmodal = ({ show, handleClose }) => {
             <div style={{ textAlign: 'center' }} className="p-3">
                 <Form onSubmit={handleProfile}>
                     <Modal.Body>
-                        <FloatingLabel controlId="username" label="Your Name" className="mb-3">
+                        <FloatingLabel controlId="username" label="Your Name"className="mb-3" >
                             <Form.Control
                                 type="text"
                                 name="username"
