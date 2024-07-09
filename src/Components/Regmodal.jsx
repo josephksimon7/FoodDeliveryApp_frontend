@@ -42,7 +42,7 @@ const Regmodal = ({ show, handleClose }) => {
         try {
             const result = await registerApi(userData);
             if (result.status === 200) {
-                toast.success(`${result.data?.username}, Your Profile Registered Successfully`, { position: "top-right" });
+                toast.success(`${username}, Your Profile Registered Successfully`, { position: "top-right" });
                 handleClose()
                 await generateOtp(email); 
                 setUserData({ username: '', email: '', phone: '', password: '' });
