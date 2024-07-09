@@ -1,71 +1,62 @@
-body, html, .maindiv {
-    height: 100%;
-    margin: 0;
-    /* background-color: #ffeae0; */
-    /* background-color: rgba(255, 255, 0, 0.381); */
-  }
-
-.maindiv{
-    
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+body,
+html,
+.maindiv {
+  height: 100%;
+  margin: 0;
 }
 
-.maincontainer{
-    margin-top:30px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    /* background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    
+.maindiv {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.logbtn{
+.maincontainer {
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logbtn {
   border: none;
-   width: 100px;
-   
-  }
-  .logindiv{
-    border-radius: 10px;
-  }
-
-
-
-
-.content-right img{
-    width: 500px;
-    height: auto;
-    position: relative;
-
-    
+  width: 100px;
 }
 
-.ikon{
-    height: 40px;
-    width: fit-content;
-    padding: 5px;
+.logindiv {
+  border-radius: 10px;
 }
-.GoogleLogin{
-    margin-left: 5px;
+
+
+.content-right img {
+  width: 500px;
+  height: auto;
+  position: relative;
 }
- .logo{
-    width: 7%;
-    height: auto;
-    justify-content: left;
- }
+
+.ikon {
+  height: 40px;
+  width: fit-content;
+  padding: 5px;
+}
+
+.GoogleLogin {
+  margin-left: 5px;
+}
+
+.logo {
+  width: 7%;
+  height: auto;
+  justify-content: left;
+}
+
 .logo-container {
-    flex: 0 0 auto;
-    padding: 10px;
-    justify-content: left;
-  }
+  flex: 0 0 auto;
+  padding: 10px;
+  justify-content: left;
+}
 
-
-
-  .form-floating .form-control:focus,
+.form-floating .form-control:focus,
 .form-floating .form-control:focus {
   border-color: #fe0d0089;
   box-shadow: 0 0 0 0.25rem rgba(254, 12, 0, 0.25);

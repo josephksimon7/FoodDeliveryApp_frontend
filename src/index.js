@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { Toaster } from 'react-hot-toast';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +14,7 @@ root.render(
   <GoogleOAuthProvider clientId='903446393348-bltqjjlf6u17l7psn6niigdn4e0j8854.apps.googleusercontent.com'>
   <BrowserRouter>
   <App />
+  <Toaster/>
   </BrowserRouter>
   </GoogleOAuthProvider>
  
