@@ -44,11 +44,11 @@ const Login = () => {
         const token = result.data.token;
         const username = result.data.user.username || "User";
 
-        alert(`${username}, you have logged in successfully`);
+        toast.success(`${username}, you have logged in successfully`,{ position: 'top-center' });
         setUserlogin({ email: "", password: "" });
         navigate("/home");
       } else {
-        alert(result.response.data);
+        toast.error(result.response.data,{ position: 'top-right' });
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -74,14 +74,14 @@ const Login = () => {
         sessionStorage.setItem("token", result.data.token);
         const username = result.data.user.username || "User";
 
-        alert(`${username}, you have logged in successfully with Google`);
+        toast.success(`${username}, you have logged in successfully with Google`,{ position: 'top-center' });
         navigate("/home"); // Redirect to home page after successful login
       } else {
         alert(result.response.data); // Handle potential errors from backend
       }
     } catch (error) {
       console.error("Error during Google Login backend:", error);
-      alert("An error occurred during Google Login. Please try again.");
+     toast.error("An error occurred during Google Login. Please try again.",{ position: 'top-right' });
     }
   };
 
@@ -98,11 +98,11 @@ const Login = () => {
       <div className='maindiv'>
         <Container className='maincontainer'>
           <Row>
-            <Col lg={6}>
-              <div className='text-center'>
-                <h1 className="fw-bold ms-5 heading">Sign in to</h1>
-                <h3 className="ms-5">Lorem ipsum is simply</h3>
-                <p className="mt-5 ms-5 fs-5">
+            <Col lg={6} >
+              <div >
+                <h1 className="fw-bold ms-3 heading">Sign in to</h1>
+                <h3 className="ms-3">Lorem ipsum is simply</h3>
+                <p className="mt-3 ms-3 fs-5">
                   If you don't have an account, you can{' '}
                   <button
                     onClick={handleModalShow}

@@ -53,7 +53,7 @@ const Regmodal = ({ show, handleClose }) => {
             }
 
         } catch (error) {
-            if(error.response.status===406){
+            if(error.result.status===406){
                 alert("User already exist")
             }
             console.error('Error response from API:', error.response);
@@ -76,6 +76,7 @@ const Regmodal = ({ show, handleClose }) => {
 
 
     return (
+
         <Modal show={show} onHide={handleClose} centered>
             <Modal.Header closeButton style={{ backgroundColor: '#FE0C00' }}>
                 <Modal.Title className='text-white'>REGISTER</Modal.Title>

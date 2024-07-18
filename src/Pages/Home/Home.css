@@ -1,0 +1,18 @@
+.hover:hover{
+    border-bottom: 2px solid #647650 ;
+    position: relative;
+   display: inline-block; 
+
+}
+.navcart{
+    position: relative;
+}
+.navcart .dot{
+    position: absolute;
+    min-width: 9px;
+    min-height: 9px;
+    background-color: #FE0C00;
+    border-radius: 5px;
+    top: -4px;
+    left:40px;
+}

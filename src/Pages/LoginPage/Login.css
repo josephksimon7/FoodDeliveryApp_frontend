@@ -3,12 +3,13 @@ html,
 .maindiv {
   height: 100%;
   margin: 0;
+  
 }
 
 .maindiv {
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .maincontainer {
@@ -29,7 +30,7 @@ html,
 
 
 .content-right img {
-  width: 360px;
+  width: 500px;
   height: auto;
   position: relative;
 }
