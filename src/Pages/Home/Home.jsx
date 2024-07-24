@@ -4,10 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { assets } from '../../assets/assets';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import HomeCarousal from '../../Components/HomeCarousal';
-import Homecard from '../../Components/Homecard';
-import MenuExplore from '../../Components/MenuExplore';
-import Footer from '../../Components/Footer';
+import HomeCarousal from '../../Components/Home Carousal/HomeCarousal';
+import MenuExplore from '../../Components/Menu Explore/MenuExplore';
+import Footer from '../../Components/Footer/Footer';
+import AppDownload from '../../Components/App Download/AppDownload';
+import FoodDisplay from '../../Components/FoodDisplay/FoodDisplay';
+
+
+
 
 const Home = () => {
 
@@ -54,10 +58,10 @@ const [category,setCategory]= useState("All")
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto ">
               <Nav.Link href="#home" className="text-black me-5 ms-2 hover fw-bold ">Home</Nav.Link>
-              <Nav.Link href="#menu" className="text-black me-5 ms-2 hover fw-bold">Menu</Nav.Link>
-              <Nav.Link href="#contact" className="text-black me-5 ms-2 hover fw-bold">Contact Us</Nav.Link>
+              <Nav.Link href="#explore-menu" className="text-black me-5 ms-2 hover fw-bold">Menu</Nav.Link>
+              <Nav.Link href="#footer" className="text-black me-5 ms-2 hover fw-bold">Contact Us</Nav.Link>
              <div className='navcart'>
-                <Nav.Link href="#cart" className="me-5 hover ms-2">
+                <Nav.Link href="Cart" className="me-5 hover ms-2">
                   <img src={assets.carticon} alt="" height="20px" width="20px" />
                 </Nav.Link>
                 <div className='dot'></div>
@@ -96,8 +100,11 @@ const [category,setCategory]= useState("All")
      <HomeCarousal></HomeCarousal>
 
      <MenuExplore category={category} setCategory={setCategory}></MenuExplore>
+     <FoodDisplay category={category}></FoodDisplay>
 
-      <Homecard></Homecard>
+      
+
+      <AppDownload></AppDownload>
 
       <Footer></Footer>
 

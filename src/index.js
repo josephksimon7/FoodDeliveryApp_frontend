@@ -7,15 +7,19 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { Toaster } from 'react-hot-toast';
+import StoreContextProvider from './Context/StoreContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GoogleOAuthProvider clientId='903446393348-bltqjjlf6u17l7psn6niigdn4e0j8854.apps.googleusercontent.com'>
-  <BrowserRouter>
-  <App />
-  <Toaster/>
-  </BrowserRouter>
+
+  <StoreContextProvider>
+    <BrowserRouter>
+    <App />
+    <Toaster/>
+    </BrowserRouter>
+  </StoreContextProvider>
   </GoogleOAuthProvider>
  
 );

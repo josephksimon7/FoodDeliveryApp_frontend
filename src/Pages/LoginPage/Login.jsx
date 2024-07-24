@@ -6,7 +6,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { GoogleLogin } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
-import Regmodal from '../../Components/Regmodal';
+import Regmodal from '../../Components/Register/Regmodal';
 import { loginApi, googleLoginApi } from '../../Services/allApi';
 import toast from 'react-hot-toast';
 

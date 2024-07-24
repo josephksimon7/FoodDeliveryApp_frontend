@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, FloatingLabel, Form } from 'react-bootstrap';
-import { emailgenerateOtpApi, registerApi } from '../Services/allApi';
+import { emailgenerateOtpApi, registerApi } from '../../Services/allApi';
 import { useNavigate } from 'react-router-dom';
 import "./Regmodal.css"
 import toast from 'react-hot-toast';

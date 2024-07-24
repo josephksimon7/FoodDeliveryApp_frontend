@@ -8,6 +8,13 @@ import carticon from "./basket_icon.png"
 import profileicon from "./profile_icon.png" 
 import carousal from "./header_img.png"
 import logo2 from "./logoedit.png"
+import carousal2 from "./carou2.jpg"
+import carousal3 from "./carou3.jpg"
+import add_food from "./add_icon_white.png"
+import remove_food from "./remove_icon_red.png"
+import add_green from "./add_icon_green.png"
+import playstore from "./play_store.png"
+import appstore from "./app_store.png"
 
 import food1 from "./food_1.png"
 import food2 from "./food_2.png"
@@ -53,7 +60,14 @@ export const assets={
     carticon,
     profileicon,
     carousal,
-    logo2
+    logo2,
+    carousal2,
+    carousal3,
+    add_food,
+    remove_food,
+    add_green,
+    playstore,
+    appstore
 
     
 }
@@ -71,7 +85,7 @@ export const food_list = [
 },
 {
     _id:"2",
-    name:"Greek salad",
+    name:"Veg salad",
     image:food2,
     price:12,
     description:"lorem nxnxnxxnn",
