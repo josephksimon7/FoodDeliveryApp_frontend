@@ -21,10 +21,16 @@
     padding: 6px 10px;
     border-radius: 3px 0px 0px 3px;
     cursor: pointer;
-    
+    text-decoration: none;
 }
 .sidebar-option p{
     margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+.sidebar-option.active{
+    background-color: #fff0ed;
+    border-color: #FE0C00;
 }
 @media (max-width:900px){
     .sidebar-option p{
