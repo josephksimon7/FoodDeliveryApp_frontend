@@ -2,13 +2,14 @@ import React, { useContext } from 'react'
 import './Cart.css'
 import Header from '../../Components/Navbar/Navbar'
 import { StoreContext } from '../../Context/StoreContext'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 
 
 
 const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
-
+  const navigate = useNavigate();
   return (
 
     <div >
@@ -16,13 +17,13 @@ const Cart = () => {
       <Header></Header>
       <div className='cart'>
         <div className="cart-items">
-          <div className="cart-items-title">
-            <p>Items</p>
-            <p>Title</p>
-            <p>Price</p>
-            <p>Quantity</p>
-            <p>Total</p>
-            <p>Remove</p>
+          <div className="cart-items-title" >
+            <p style={{textAlign:"left",fontWeight:"bold"}}>Items</p>
+            <p style={{fontWeight:"bold"}}>Title</p>
+            <p style={{fontWeight:"bold"}}>Price</p>
+            <p style={{fontWeight:"bold"}}>Quantity</p>
+            <p style={{fontWeight:"bold"}}>Total</p>
+            <p style={{fontWeight:"bold"}}>Remove</p>
           </div>
           <br />
           <hr />
@@ -33,11 +34,11 @@ const Cart = () => {
                 <div >
                   <div className='cart-items-title cart-items-item'>
                     <img src={item.image} alt="" />
-                    <p>{item.name}</p>
-                    <p>${item.price}</p>
-                    <p>{cartItems[item._id]}</p>
-                    <p>${item.price * cartItems[item._id]}</p>
-                    <p onClick={()=>removeFromCart(item._id)} className='cross'>X</p>
+                    <p style={{fontWeight:"400"}}>{item.name}</p>
+                    <p style={{fontWeight:"400"}}>${item.price}</p>
+                    <p style={{fontWeight:"400"}}>{cartItems[item._id]}</p>
+                    <p style={{fontWeight:"400"}}>${item.price * cartItems[item._id]}</p>
+                    <p onClick={()=>removeFromCart(item._id)} className='cross'style={{fontWeight:"400"}}>X</p>
                   </div>
                   <hr />
                 </div>
@@ -64,11 +65,11 @@ const Cart = () => {
                 <hr />
                 <div className="cart-total-details">
                   <b>Total</b>
-                  <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
+                  <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+5}</b>
                 </div>
                 
               </div>
-              <button>Proceed To Checkout</button>
+              <button onClick={()=>navigate('/order')}>Proceed To Checkout</button>
             </div>
             <div className="cart-promocode">
               <div>

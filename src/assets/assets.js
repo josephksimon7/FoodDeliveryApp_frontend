@@ -5,7 +5,7 @@ import apple from "./apple.png"
 import logo from "./logo.jpg"
 import searchicon from "./search_icon.png"
 import carticon from "./basket_icon.png"
-import profileicon from "./profile_icon.png" 
+import profileicon from "./profile_icon.png"
 import carousal from "./header_img.png"
 import logo2 from "./logoedit.png"
 import carousal2 from "./carou2.jpg"
@@ -49,8 +49,8 @@ import menu8 from "./menu_8.png"
 
 
 
-export const assets={
-    
+export const assets = {
+
     foodreg,
     google,
     apple,
@@ -69,59 +69,59 @@ export const assets={
     playstore,
     appstore
 
-    
+
 }
 
 
 export const food_list = [
 
-{
- _id:"1",
- name:"Greek salad",
- image:food1,
- price:12,
- description:"lorem nxnxnxxnn",
- category: "Salad"
-},
-{
-    _id:"2",
-    name:"Veg salad",
-    image:food2,
-    price:12,
-    description:"lorem nxnxnxxnn",
-    category: "Noodles"
-   },
-   {
-    _id:"3",
-    name:"Greek salad",
-    image:food3,
-    price:12,
-    description:"lorem nxnxnxxnn",
-    category: "Salad"
-   },
-   {
-    _id:"4",
-    name:"Greek salad",
-    image:food4,
-    price:12,
-    description:"lorem nxnxnxxnn",
-    category: "Salad"
-   },
-   {
-    _id:"5",
-    name:"Greek salad",
-    image:food5,
-    price:12,
-    description:"lorem nxnxnxxnn",
-    category: "Salad"
-   }
+    {
+        _id: "1",
+        name: "Greek salad",
+        image: food1,
+        price: 12,
+        description: "lorem nxnxnxxnn",
+        category: "Salad"
+    },
+    {
+        _id: "2",
+        name: "Veg salad",
+        image: food2,
+        price: 12,
+        description: "lorem nxnxnxxnn",
+        category: "Noodles"
+    },
+    {
+        _id: "3",
+        name: "Greek salad",
+        image: food3,
+        price: 12,
+        description: "lorem nxnxnxxnn",
+        category: "Salad"
+    },
+    {
+        _id: "4",
+        name: "Greek salad",
+        image: food4,
+        price: 12,
+        description: "lorem nxnxnxxnn",
+        category: "Salad"
+    },
+    {
+        _id: "5",
+        name: "Greek salad",
+        image: food5,
+        price: 12,
+        description: "lorem nxnxnxxnn",
+        category: "Salad"
+    }
 
 
 
 ]
 
 
-export const menu_list=[
+export const menu_list = [
     {
         menu_name: "Salad",
         menu_image: menu1

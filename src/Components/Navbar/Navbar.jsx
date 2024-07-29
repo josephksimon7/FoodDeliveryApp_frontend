@@ -40,13 +40,13 @@ const Header = () => {
     <div>
          <Navbar expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#home" className="ms-3">
+          <Navbar.Brand as={NavLink} to={'/home'} className="ms-3">
             <img src={assets.logo} alt="Logo" style={{ height: '75px' }} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto ">
-              <Nav.Link href="#home" className="text-black me-5 ms-2 hover fw-bold ">Home</Nav.Link>
+              <Nav.Link as={NavLink} to={'/home'} className="text-black me-5 ms-2 hover fw-bold ">Home</Nav.Link>
               <Nav.Link href="#explore-menu" className="text-black me-5 ms-2 hover fw-bold">Menu</Nav.Link>
               <Nav.Link href="#footer" className="text-black me-5 ms-2 hover fw-bold">Contact Us</Nav.Link>
              <div className='navcart '>
