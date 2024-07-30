@@ -1,5 +1,5 @@
 import './App.css';
-import { Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import { Navigate, Route, Router, Routes, useNavigate } from 'react-router-dom';
 import Login from './Pages/LoginPage/Login';
 import Home from './Pages/Home/Home';
 import EmailVerification from './Pages/EmailVerification/EmailVerification';
@@ -12,16 +12,18 @@ import List from './Pages/Admin/List_Admin/List';
 import Orders from './Pages/Admin/Orders_Admin/Orders';
 import { useEffect } from 'react';
 
-
 const ProtectedRoute = ({ element, roles }) => {
   const user = JSON.parse(sessionStorage.getItem("Existinguser"));
 
   if (!user) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/" />;
   }
 
   if (roles && !roles.includes(user.role)) {
-    return <Navigate to="/home" />;
+    if (user.role == "user") {
+      return <Navigate to="/home" />;
+    }
+
   }
 
   return element;
@@ -34,14 +36,16 @@ function App() {
     if (user) {
       if (user.role === "admin") {
         navigate("/admin");
-      } else {
+      }
+      else {
         navigate("/home");
       }
     }
-  }, [navigate]);
+  }, []);
 
   return (
     <div className="App">
+
       <Routes>
 
         <Route path='/' element={<Login></Login>} />
@@ -50,11 +54,12 @@ function App() {
         <Route path='/phoneverification' element={<PhoneVerification></PhoneVerification>} />
         <Route path='/cart' element={<Cart></Cart>} />
         <Route path='/order' element={<PlaceOrder></PlaceOrder>} />
-        <Route path="/add" element={<Add />} />
-        <Route path="/list" element={<List />} />
-        <Route path="/orders" element={<Orders />} />
         <Route path="/admin" element={<ProtectedRoute element={<AdminPanel />} roles={["admin"]} />} />
+        <Route path="/admin/add" element={<ProtectedRoute element={<Add />} roles={["admin"]} />} />
+        <Route path="/admin/list" element={<ProtectedRoute element={<List />} roles={["admin"]} />} />
+        <Route path="/admin/orders" element={<ProtectedRoute element={<Orders />} roles={["admin"]} />} />
       </Routes>
+
 
 
 
@@ -64,3 +69,5 @@ function App() {
 }
 
 export default App;
+
+

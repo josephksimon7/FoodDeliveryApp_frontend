@@ -46,7 +46,7 @@ const Login = () => {
 
         toast.success(`${username}, you have logged in successfully`,{ position: 'top-center' });
         setUserlogin({ email: "", password: "" });
-        navigate("/home");
+        navigate("/admin");
       } else {
         toast.error(result.response.data,{ position: 'top-right' });
       }
