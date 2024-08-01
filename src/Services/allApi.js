@@ -35,3 +35,26 @@ export const phonegenerateOtpApi = async (body) => {
 export const phoneverificationOtpApi = async (body) => {
   return await commonApi("POST", `${BASE_URL}/phoneotpverify`, body, "");
 }
+
+// Admin Panel 
+
+// Admin Add
+export const AllFoodAddApi = async (formData) => {
+  return await commonApi("POST", `${BASE_URL}/add`, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data"
+    }
+  });
+}
+
+// Admin list 
+
+export const allFoodList = async () => {
+  return await commonApi("GET", `${BASE_URL}/foodlist`, "")
+}
+
+// Admin list - remove 
+export const removeFoodApi = async (body) => {
+  return await commonApi("POST", `${BASE_URL}/remove`, body, "")
+}
+

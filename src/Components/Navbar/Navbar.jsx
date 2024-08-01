@@ -80,6 +80,7 @@ const Header = () => {
                     <Dropdown.Item> {userData.username} </Dropdown.Item>
                     <Dropdown.Item >{userData.email}</Dropdown.Item>
                     <Dropdown.Item >{userData.phone}</Dropdown.Item>
+                    <Dropdown.Item ><div className='d-flex align-items-center'><img src={assets.bag} alt="" style={{width:"20px"}}/> <div style={{fontWeight:"400"}}>Orders</div></div></Dropdown.Item>
                     <Dropdown.Item onClick={logout} style={{ color: "#FE0C00" }}><i class="fa-solid fa-arrow-right-from-bracket me-1"></i>Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

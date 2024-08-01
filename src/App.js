@@ -55,7 +55,7 @@ function App() {
         <Route path='/cart' element={<Cart></Cart>} />
         <Route path='/order' element={<PlaceOrder></PlaceOrder>} />
         <Route path="/admin" element={<ProtectedRoute element={<AdminPanel />} roles={["admin"]} />} />
-        <Route path="/admin/add" element={<ProtectedRoute element={<Add />} roles={["admin"]} />} />
+        <Route path="/admin/add" element={<ProtectedRoute element={<Add  />} roles={["admin"]} />} />
         <Route path="/admin/list" element={<ProtectedRoute element={<List />} roles={["admin"]} />} />
         <Route path="/admin/orders" element={<ProtectedRoute element={<Orders />} roles={["admin"]} />} />
       </Routes>
