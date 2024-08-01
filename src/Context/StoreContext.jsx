@@ -2,6 +2,7 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
 
+
 export const StoreContext = createContext(null)
 const url = "http://localhost:5002";
 const StoreContextProvider = (props) => {
@@ -9,7 +10,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [food_list,setFoodlist]=useState([])
 
-    const addToCart = (itemId) => {
+    const addToCart = async (itemId) => {
 
         if (!cartItems[itemId]) {
             setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
@@ -17,6 +18,7 @@ const StoreContextProvider = (props) => {
         else {
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         }
+        
     }
 
     const removeFromCart = (itemId) => {
@@ -51,7 +53,8 @@ const StoreContextProvider = (props) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
-        url
+        url,
+        
     }
     return (
         <StoreContext.Provider value={contextValue}>

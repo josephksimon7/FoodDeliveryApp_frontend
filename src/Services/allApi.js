@@ -58,3 +58,10 @@ export const removeFoodApi = async (body) => {
   return await commonApi("POST", `${BASE_URL}/remove`, body, "")
 }
 
+//  Cart 
+
+// user Cart add 
+export const addCart = async () => {
+  return await commonApi("GET", `${BASE_URL}/cart/add`, "")
+}
+
