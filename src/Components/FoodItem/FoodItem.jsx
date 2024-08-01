@@ -9,7 +9,7 @@ import { StoreContext } from "../../Context/StoreContext";
 
 export const FoodItem = ({ id, name, price, description, image }) => {
  
-  const{cartItems,addToCart,removeFromCart}=useContext(StoreContext)
+  const{cartItems,addToCart,removeFromCart,url}=useContext(StoreContext)
   
   return (
     <>
@@ -18,7 +18,7 @@ export const FoodItem = ({ id, name, price, description, image }) => {
       <Row className="">
         <Col   className="mb-4 d-flex ">
           <Card className="shadow-sm" style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={image} />
+            <Card.Img variant="top" src={url+"/images/"+image} />
             {/* {itemCount === 0 && ( // Use && for conditional rendering
               <img src={assets.add_icon} alt="Add Icon" />
             )} */}
