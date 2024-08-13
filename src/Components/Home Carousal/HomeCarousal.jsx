@@ -11,7 +11,7 @@ const HomeCarousal = () => {
     <div>
 
 
-<Container>
+<Container className='mt-4'>
   <Carousel >
           <Carousel.Item>
   

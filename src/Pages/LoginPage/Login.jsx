@@ -9,12 +9,13 @@ import { useNavigate } from 'react-router-dom';
 import Regmodal from '../../Components/Register/Regmodal';
 import { loginApi, googleLoginApi } from '../../Services/allApi';
 import toast from 'react-hot-toast';
+import { StoreContext } from '../../Context/StoreContext';
 
 
 
 
 const Login = () => {
-  
+  const {url,setToken}=useContext(StoreContext)
   const [showModal, setShowModal] = useState(false);
   const [userlogin, setUserlogin] = useState({
     email: "",
@@ -38,6 +39,10 @@ const Login = () => {
 
     try {
       const result = await loginApi(userlogin);
+      if (result.status == 200) {
+        setToken(result.data.token)
+        localStorage.setItem("token", result.data.token)
+      }
       console.log("API response:", result);
 
       if (result.status === 200) {
@@ -46,11 +51,11 @@ const Login = () => {
         const token = result.data.token;
         const username = result.data.user.username || "User";
 
-        toast.success(`${username}, you have logged in successfully`,{ position: 'top-center' });
+        toast.success(`${username}, you have logged in successfully`, { position: 'top-center' });
         setUserlogin({ email: "", password: "" });
-        navigate("/admin");
+        navigate("/admin/add");
       } else {
-        toast.error(result.response.data,{ position: 'top-right' });
+        toast.error(result.response.data, { position: 'top-right' });
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -76,14 +81,14 @@ const Login = () => {
         sessionStorage.setItem("token", result.data.token);
         const username = result.data.user.username || "User";
 
-        toast.success(`${username}, you have logged in successfully with Google`,{ position: 'top-center' });
+        toast.success(`${username}, you have logged in successfully with Google`, { position: 'top-center' });
         navigate("/home"); // Redirect to home page after successful login
       } else {
         alert(result.response.data); // Handle potential errors from backend
       }
     } catch (error) {
       console.error("Error during Google Login backend:", error);
-     toast.error("An error occurred during Google Login. Please try again.",{ position: 'top-right' });
+      toast.error("An error occurred during Google Login. Please try again.", { position: 'top-right' });
     }
   };
 

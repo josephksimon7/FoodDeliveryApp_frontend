@@ -16,6 +16,7 @@ import add_green from "./add_icon_green.png"
 import playstore from "./play_store.png"
 import appstore from "./app_store.png"
 import bag from "./bag_icon.png"
+import parcel_icon from './admin_parcel_icon.png'
 
 import food1 from "./food_1.png"
 import food2 from "./food_2.png"
@@ -69,7 +70,8 @@ export const assets = {
     add_green,
     playstore,
     appstore,
-    bag
+    bag,
+    parcel_icon
 
 
 }
