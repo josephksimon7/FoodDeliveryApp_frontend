@@ -88,7 +88,7 @@ const MyOrders = () => {
                                 <span className={`inline-block w-3 h-3 rounded-full ${order.status === "Delivered" ? "bg-green-500" : "bg-yellow-500"}  mr-2`}></span>
                                 <b className="text-gray-700">{order.status}</b>
                             </p>
-                            <button className="bg-green-500 font-bold text-white py-2 px-4 rounded hover:bg-green-600 transition duration-200">Track Order</button>
+                            <button onClick={fetchOrders} className="bg-green-500 font-bold text-white py-2 px-4 rounded hover:bg-green-600 transition duration-200">Track Order</button>
                         </div>
                     </div>
                 ))}

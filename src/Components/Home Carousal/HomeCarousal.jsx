@@ -15,15 +15,18 @@ const HomeCarousal = () => {
   <Carousel >
           <Carousel.Item>
   
-            <img
-              src={assets.carousal}
-              alt="First slide"
-              className="d-block mx-auto "
-              
-            />
+            <div>
+              <img
+                src={assets.carousal}
+                alt="First slide"
+                className="d-block mx-auto "
+                
+              />
+              <div className='image-overlay'></div>
+            </div>
             <Carousel.Caption className='carousalcaptions'>
           <h1 className='anim text-left'>Order Your <br />Favourite Food Here</h1>
-          <p className='anim text-left'>Choose from a diverse menu featuring a delectable array of dishes crafteed with the finest ingredients and culinary expertise.Our mission is to satisfy your cravings and elevate youe dining experience,onedelicious meal at a time</p>
+          <p className='anim text-left carousaltext'>Choose from a diverse menu featuring a delectable array of dishes crafteed with the finest ingredients and culinary expertise.Our mission is to satisfy your cravings and elevate youe dining experience,onedelicious meal at a time</p>
         </Carousel.Caption>
            </Carousel.Item>
   
@@ -32,28 +35,34 @@ const HomeCarousal = () => {
           <Carousel.Item>
            
   
-            <img
-              src={assets.carousal2}
-              alt="First slide"
-              className="d-block mx-auto "
-            style={{borderRadius:"15px"}}
-            />
+            <div >
+              <img
+                src={assets.carousal2}
+                alt="First slide"
+                className="d-block mx-auto "
+              style={{borderRadius:"15px"}}
+              />
+              <div className='image-overlay'></div>
+            </div>
             <Carousel.Caption className='carousalcaptions'>
-          <h1 className='anim text-left' style={{color:"black"}}>Order Your <br />Favourite Food Here</h1>
-          <p className='anim text-left' style={{color:"black"}}> Choose from a diverse menu featuring a delectable array of dishes crafteed with the finest ingredients and culinary expertise.Our mission is to satisfy your cravings and elevate youe dining experience,onedelicious meal at a time</p>
+          <h1 className='anim text-left' >Order Your <br />Favourite Food Here</h1>
+          <p className='anim text-left' > Choose from a diverse menu featuring a delectable array of dishes crafteed with the finest ingredients and culinary expertise.Our mission is to satisfy your cravings and elevate youe dining experience,onedelicious meal at a time</p>
         </Carousel.Caption>
 
           </Carousel.Item>
           <Carousel.Item>
             
   
-            <img
-              src={assets.carousal3}
-              alt="First slide"
-              className="d-block mx-auto  "
-              style={{borderRadius:"15px"}}
-              // style={{height:"400px"}}
-            />
+           <div>
+              <img
+                src={assets.carousal3}
+                alt="First slide"
+                className="d-block mx-auto  "
+                style={{borderRadius:"15px"}}
+                // style={{height:"400px"}}
+              />
+              <div className='image-overlay'></div>
+           </div>
             <Carousel.Caption className='carousalcaptions'>
           <h1 className='anim text-left'>Order Your <br />Favourite Food Here</h1>
           <p className='anim text-left'>Choose from a diverse menu featuring a delectable array of dishes crafteed with the finest ingredients and culinary expertise.Our mission is to satisfy your cravings and elevate youe dining experience,onedelicious meal at a time</p>

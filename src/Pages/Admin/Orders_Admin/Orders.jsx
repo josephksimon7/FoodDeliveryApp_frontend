@@ -30,7 +30,7 @@ const Orders = () => {
       orderId,
       status: event.target.value
     })
-    if (response.data.sucess) {
+    if (response.data.success) {
       await fetchAllOrders();
     }
   }

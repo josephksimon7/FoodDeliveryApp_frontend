@@ -40,8 +40,19 @@ const AdminNavbar = () => {
         padding: "7px",
       }}
     >
-      <img className="logo" src={adminAssets.logo} alt="" />
+      {/* <img className="logo" src={adminAssets.logo} alt="" /> */}
       {/* <img className='profile' src={adminAssets.profile_image} alt="" /> */}
+      <h2>
+              <div className="d-flex justify-content-center gap-1">
+                <i
+                  class="fa-solid fa-burger fa-xs fs-1 mt-3"
+                  style={{ color: "#FE0C00" }}
+                ></i>
+                <div>
+                <span style={{ color: "#FE0C00" }}> <b>B</b>ite</span><span className="text-gray-700 " style={{fontWeight:'500'}}>Box</span>
+                </div>
+              </div>
+            </h2>
       {userData ? (
         <Dropdown className="me-5 mt-1">
           <Dropdown.Toggle

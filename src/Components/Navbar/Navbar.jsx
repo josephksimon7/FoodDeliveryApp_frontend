@@ -60,9 +60,10 @@ const Header = () => {
               <Nav.Link as={NavLink} to={'/home'} className="text-black me-5 ms-2 hover fw-bold ">Home</Nav.Link>
               <Nav.Link href="#explore-menu" className="text-black me-5 ms-2 hover fw-bold">Menu</Nav.Link>
               <Nav.Link href="#footer" className="text-black me-5 ms-2 hover fw-bold">Contact Us</Nav.Link>
+              <Nav.Link as={NavLink} to={'/myorders'} className="text-black me-5 ms-2 hover fw-bold">Orders</Nav.Link>
               <div className='navcart '>
 
-                <Nav.Link as={NavLink} to={'/cart'} className="me-5 hover ms-2 ">
+                <Nav.Link as={NavLink} to={'/cart'} className="me-5 hover1 ms-2 ">
                   <img src={assets.carticon} alt="" height="20px" width="20px" />
                 </Nav.Link>
 
@@ -91,7 +92,6 @@ const Header = () => {
                     <Dropdown.Item> {userData.username} </Dropdown.Item>
                     <Dropdown.Item >{userData.email}</Dropdown.Item>
                     <Dropdown.Item >{userData.phone}</Dropdown.Item>
-                    <Dropdown.Item ><div className='d-flex align-items-center '><img src={assets.bag} alt="" style={{ width: "20px", marginRight:"2px"}} /> <div style={{ fontWeight: "400" }}>Orders</div></div></Dropdown.Item>
                     <Dropdown.Item onClick={logout} style={{ color: "#FE0C00" }}><i class="fa-solid fa-arrow-right-from-bracket me-1"></i>Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
