@@ -50,7 +50,7 @@ const Orders = () => {
             <h3>Order Page</h3>
             <div className='order-list'>
               {orderData.map((order, index) => (
-                <div key={index} className="border border-gray-300 rounded-lg bg-white p-5 shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div key={index} className="order-item border border-gray-300 rounded-lg bg-white p-5 shadow-sm hover:shadow-md transition-shadow duration-300">
                   <div className="flex items-center mb-4">
                     <img src={assets.parcel_icon} alt="" className="w-12 h-12 mr-4" />
                     <div>

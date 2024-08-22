@@ -17,3 +17,10 @@
     flex-grow: 1;
     
   }
+  
+.order-item select{
+  background-color: #ffe8e4;
+  border: 1px solid #FE0C00;
+  width: max(10vw,120px);
+  padding: 10px;
+}
